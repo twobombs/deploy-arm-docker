@@ -29,7 +29,6 @@ COPY xstartup /root/.vnc/
 RUN chmod 755 /root/.vnc/xstartup
 
 # add cl dev apps & dependancies
-RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 ocl-icd-opencl-dev oclgrind python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
-
+RUN apt-get update && apt-get install -y git software-properties-common ant openjdk-8-jdk qv4l2 ocl-icd-opencl-dev pocl-opencl-icd oclgrind python-setuptools python3-setuptools python-migrate dkms && apt-get clean all && apt -y autoremove
 
 EXPOSE 5900 6080
